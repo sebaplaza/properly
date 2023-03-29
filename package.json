@@ -1,0 +1,17 @@
+{
+	"name": "properly",
+	"version": "1.0.0",
+	"description": "Deeply list properties on any object",
+	"main": "dist/index.js",
+	"scripts": {
+		"test": "vitest",
+		"build": "tsup src/index.ts"
+	},
+	"keywords": [],
+	"author": "Sebastian Plaza <sebastianplaza@gmail.com>",
+	"license": "ISC",
+	"devDependencies": {
+		"tsup": "^6.7.0",
+		"vitest": "^0.29.8"
+	}
+}
