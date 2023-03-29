@@ -5,22 +5,22 @@ type Options = {
 	leading: boolean;
 };
 
-function listProperties(obj: object, options?: Partial<Options>): Entry[] {
-	const allKeys: Entry[] = [];
-
+function listProperties(obj: object, options: Partial<Options> = {}): Entry[] {
 	if (!obj) return [];
 
 	const entries = Object.entries(obj);
+	const allKeys: Entry[] = [];
 
-	const leading = options?.leading ?? true;
-	const separator = options?.separator ? options.separator : ".";
-	const prefix = options?.parentPath
+	const leading = options.leading ?? true;
+	const separator = options.separator ? options.separator : ".";
+	const prefix = options.parentPath
 		? `${options.parentPath}${separator}`
 		: leading
 		? separator
 		: "";
 
-	for (const [key, value] of entries) {
+	for (let idx = 0; idx < entries.length; idx++) {
+		const [key, value] = entries[idx];
 		const path = `${prefix}${key}`;
 		allKeys.push({ path, value });
 		if (typeof value === "object") {
