@@ -1,6 +1,6 @@
 {
 	"name": "@sebaplaza/properly",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"description": "Deeply list properties on any object",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
