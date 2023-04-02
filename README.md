@@ -6,12 +6,12 @@ It will return a flatten object with a list of paths and its values.
 
 ## How to use it ?
 
-```js
-npm add properly
+```sh
+npm add @sebaplaza/properly
 ```
 
 ```js
-const { listProperties } = require('.');
+const { listProperties } = require('@sebaplaza/properly');
 
 const data = {
   name: 'myself',

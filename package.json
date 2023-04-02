@@ -1,5 +1,5 @@
 {
-	"name": "properly",
+	"name": "@sebaplaza/properly",
 	"version": "0.1.0",
 	"description": "Deeply list properties on any object",
 	"main": "dist/index.js",
