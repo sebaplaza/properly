@@ -6,7 +6,10 @@
 	"types": "dist/index.d.ts",
 	"scripts": {
 		"test": "vitest",
-		"build": "tsup src/index.ts --dts --sourcemap"
+		"build": "tsup src/index.ts --dts --sourcemap",
+		"lint": "rome ci src/",
+		"format": "rome format --write src/",
+		"check": "rome check --apply src/"
 	},
 	"keywords": [
 		"deep",

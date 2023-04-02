@@ -10,7 +10,7 @@ type ListPropertiesOptions = {
 
 function listProperties(
 	obj: object,
-	options: Partial<ListPropertiesOptions> = {}
+	options: Partial<ListPropertiesOptions>,
 ): PropertyEntry[] {
 	// TODO we can improve performance x2 if we can find a way to fill an array in a more performance way
 	// since array.push is not very efficient
@@ -19,9 +19,9 @@ function listProperties(
 	const entries = Object.entries(obj);
 	const allProperties: PropertyEntry[] = [];
 
-	const leading = options.leading ?? true;
-	const separator = options.separator ? options.separator : "/";
-	const prefix = options.parentPath
+	const leading = options?.leading ?? true;
+	const separator = options?.separator ? options.separator : "/";
+	const prefix = options?.parentPath
 		? `${options.parentPath}${separator}`
 		: leading
 		? separator
