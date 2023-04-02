@@ -1,6 +1,6 @@
 # properly-deep
 
-This is a really simple library than can list all properties (deeploy) in an object.
+This is a really simple library than can list all properties (deeply) in an object.
 
 It will return a flatten object with a list of paths and its values.
 
