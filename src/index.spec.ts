@@ -17,24 +17,24 @@ describe("deep keys", () => {
 				},
 			},
 		};
-		const result = listProperties(data, { leading: false });
+		const result = listProperties(data);
 		expect(result).toStrictEqual([
-			{ path: "name", value: "seba" },
-			{ path: "age", value: 39 },
+			{ path: "/name", value: "seba" },
+			{ path: "/age", value: 39 },
 			{
-				path: "friends",
+				path: "/friends",
 				value: ["mario", "pepe"],
 			},
 			{
-				path: "friends.0",
+				path: "/friends/0",
 				value: "mario",
 			},
 			{
-				path: "friends.1",
+				path: "/friends/1",
 				value: "pepe",
 			},
 			{
-				path: "address",
+				path: "/address",
 				value: {
 					street: "figuiers",
 					number: 9,
@@ -44,21 +44,21 @@ describe("deep keys", () => {
 					},
 				},
 			},
-			{ path: "address.street", value: "figuiers" },
-			{ path: "address.number", value: 9 },
+			{ path: "/address/street", value: "figuiers" },
+			{ path: "/address/number", value: 9 },
 			{
-				path: "address.city",
+				path: "/address/city",
 				value: {
 					postalCode: 56700,
 					name: "HENNEBONT",
 				},
 			},
 			{
-				path: "address.city.postalCode",
+				path: "/address/city/postalCode",
 				value: 56700,
 			},
 			{
-				path: "address.city.name",
+				path: "/address/city/name",
 				value: "HENNEBONT",
 			},
 		]);
