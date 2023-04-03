@@ -38,7 +38,7 @@ The second parameter allows to customize `listProperties` function
 
 We have 2 possible options:
 
-- separator (default **'\'**): define a new separator
+- separator (default **\\**): define a new separator
 - leading (default **true**): set if the separator must be used at path's start.
 
 ## Performance
