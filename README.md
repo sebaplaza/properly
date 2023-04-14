@@ -21,7 +21,8 @@ const data = {
   }
 }
 
-const result = listProperties(data)
+// this is an async function because we are using setImmediate to avoid node loop starvation
+const result = await listProperties(data)
 
 // result will be...
 [

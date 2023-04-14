@@ -3,7 +3,7 @@ import { listProperties } from ".";
 import { describe, test, expect } from "vitest";
 
 describe("deep keys", () => {
-	test("should return properties", () => {
+	test("should return properties", async () => {
 		const data = {
 			name: "seba",
 			age: 39,
@@ -17,7 +17,7 @@ describe("deep keys", () => {
 				},
 			},
 		};
-		const result = listProperties(data);
+		const result = await listProperties(data);
 		expect(result).toStrictEqual([
 			{ path: "/name", value: "seba" },
 			{ path: "/age", value: 39 },
